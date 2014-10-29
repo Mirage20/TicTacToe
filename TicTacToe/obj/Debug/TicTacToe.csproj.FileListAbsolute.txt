@@ -50,3 +50,12 @@ E:\UoM\Sem 3\Programming Challenge 1\Mini Project\Nishadi\Game\TicTacToe\TicTacT
 D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\bin\Debug\TicTacToe.exe.config
 D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.exe
 D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.pdb
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\bin\Debug\TicTacToe.exe
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\bin\Debug\TicTacToe.pdb
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.csprojResolveAssemblyReference.cache
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.Form1.resources
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.Player_Details_Multi_Players.resources
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.Player_Details_Single_Player.resources
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.Players.resources
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+D:\Nish\Semester 3\Programming Challenge\mini\tictactoe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache
