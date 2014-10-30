@@ -40,7 +40,8 @@ namespace TicTacToe
             {
                 showWinLine(winLine);
                 MessageBox.Show("Player " + winner.PlayerName + " wins ");
-               
+                updateP1Label(controller.getPlayer1());
+                updateP2Label(controller.getPlayer2());
             }
             else
             {
@@ -50,23 +51,7 @@ namespace TicTacToe
             disableButtons();
         }
         
-        public void setPlayerMode(bool players)
-        {
-            //multiPlayer = players;
-        }
-        public void setPlayer1Name(String name)
-        {
-            //player1 = name;
-            //label1.Text = player1 + "'s Turn";
-        }
-        public void setPlayer2Name(String name)
-        {
-            //player2 = name;
-        }
-        public void setDifficulty(String diffi)
-        {
-            //difficulty = diffi;
-        }
+        
 
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,53 +97,10 @@ namespace TicTacToe
             }
         }
 
-        private void selectPlToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+       
 
-        }
+        
 
-        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Xturn = true;
-            //turn_count = 0;
-            //won = false;
-            //tied = false;
-            //label1.Text = player1 + "'s Turn";
-
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    for (int j = 0; j < 3; j++)
-            //    {
-            //        buttonGrid[i, j].Enabled = true;
-            //        buttonGrid[i, j].Text = "";
-            //    }
-            //}
-        }
-
-        private void setPlayerModeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 newGame = new Form1();
-            newGame.ShowDialog();
-            
-        }
-
-        private void setDifficultyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //if (multiPlayer)
-            //    setDifficultyToolStripMenuItem.Enabled = false;
-            //else
-            //{
-            //    this.Hide();
-            //    Player_Details_Single_Player singleDetails = new Player_Details_Single_Player();
-            //    singleDetails.ShowDialog();
-               
-
-            //}
-        }
-
-
-        //M
 
         private MoveLocation getMoveByName(string name)
         {
@@ -253,6 +195,44 @@ namespace TicTacToe
             }
         }
 
+        private void gameSPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSingleplayer frmSP=new frmSingleplayer();
+            if(frmSP.ShowDialog()==System.Windows.Forms.DialogResult.OK)
+            {
+                diffToolStripMenuItem.Enabled = true;
+                Player human=new HumanPlayer(frmSP.getPlayerName(),frmSP.getPlayerTile());
+                Player computer= new ComputerPlayer(-frmSP.getPlayerTile(),frmSP.getDiffLevel());
+                controller.changePlayers(human, computer);
+                updateP1Label(human);
+                updateP2Label(computer);
+            }
+        }
+
+       
+        private void updateP1Label(Player player)
+        {
+            lblP1.Text = "Name : " + player.PlayerName + "\r\nWinnings : " + player.Winnings;
+        }
+
+        private void updateP2Label(Player player)
+        {
+            lblP2.Text = "Name : " + player.PlayerName + "\r\nWinnings : " + player.Winnings;
+        }
+
+        private void gameMPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMultiplayer frmMP = new frmMultiplayer();
+            if (frmMP.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                diffToolStripMenuItem.Enabled = false;
+                Player human1 = new HumanPlayer(frmMP.getP1Name(), frmMP.getP1Tile());
+                Player human2 = new HumanPlayer(frmMP.getP2Name(), frmMP.getP2Tile());
+                controller.changePlayers(human1, human2);
+                updateP1Label(human1);
+                updateP2Label(human2);
+            }
+        }
        
     }
 }

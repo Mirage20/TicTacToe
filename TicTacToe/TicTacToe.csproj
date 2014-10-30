@@ -55,17 +55,17 @@
     <Compile Include="GameLogic\GameController.cs" />
     <Compile Include="GameLogic\HumanPlayer.cs" />
     <Compile Include="GameLogic\MoveLocation.cs" />
-    <Compile Include="GUI\Player Details Multi Players.cs">
+    <Compile Include="GUI\frmMultiplayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Player Details Multi Players.Designer.cs">
-      <DependentUpon>Player Details Multi Players.cs</DependentUpon>
+    <Compile Include="GUI\frmMultiplayer.Designer.cs">
+      <DependentUpon>frmMultiplayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Player Details Single Player.cs">
+    <Compile Include="GUI\frmSingleplayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Player Details Single Player.Designer.cs">
-      <DependentUpon>Player Details Single Player.cs</DependentUpon>
+    <Compile Include="GUI\frmSingleplayer.Designer.cs">
+      <DependentUpon>frmSingleplayer.cs</DependentUpon>
     </Compile>
     <Compile Include="GameLogic\Player.cs" />
     <Compile Include="GUI\Players.cs">
@@ -79,11 +79,11 @@
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Player Details Multi Players.resx">
-      <DependentUpon>Player Details Multi Players.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmMultiplayer.resx">
+      <DependentUpon>frmMultiplayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Player Details Single Player.resx">
-      <DependentUpon>Player Details Single Player.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmSingleplayer.resx">
+      <DependentUpon>frmSingleplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Players.resx">
       <DependentUpon>Players.cs</DependentUpon>

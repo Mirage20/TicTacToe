@@ -39,12 +39,20 @@
             this.btnGrid8 = new System.Windows.Forms.Button();
             this.btnGrid9 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setPlayerModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setDifficultyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gameSPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gameMPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DiffEasiestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DiffEasyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DiffMediumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DiffHardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DiffHardestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.playerStaticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +60,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lblP1 = new System.Windows.Forms.Label();
+            this.lblP2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +70,7 @@
             this.btnGrid1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrid1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGrid1.Location = new System.Drawing.Point(35, 124);
+            this.btnGrid1.Location = new System.Drawing.Point(55, 124);
             this.btnGrid1.Name = "btnGrid1";
             this.btnGrid1.Size = new System.Drawing.Size(75, 75);
             this.btnGrid1.TabIndex = 0;
@@ -71,7 +81,7 @@
             // 
             this.btnGrid2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrid2.Location = new System.Drawing.Point(116, 124);
+            this.btnGrid2.Location = new System.Drawing.Point(136, 124);
             this.btnGrid2.Name = "btnGrid2";
             this.btnGrid2.Size = new System.Drawing.Size(75, 75);
             this.btnGrid2.TabIndex = 1;
@@ -82,7 +92,7 @@
             // 
             this.btnGrid3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrid3.Location = new System.Drawing.Point(197, 124);
+            this.btnGrid3.Location = new System.Drawing.Point(217, 124);
             this.btnGrid3.Name = "btnGrid3";
             this.btnGrid3.Size = new System.Drawing.Size(75, 75);
             this.btnGrid3.TabIndex = 2;
@@ -93,7 +103,7 @@
             // 
             this.btnGrid4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrid4.Location = new System.Drawing.Point(35, 205);
+            this.btnGrid4.Location = new System.Drawing.Point(55, 205);
             this.btnGrid4.Name = "btnGrid4";
             this.btnGrid4.Size = new System.Drawing.Size(75, 75);
             this.btnGrid4.TabIndex = 3;
@@ -104,7 +114,7 @@
             // 
             this.btnGrid5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrid5.Location = new System.Drawing.Point(116, 205);
+            this.btnGrid5.Location = new System.Drawing.Point(136, 205);
             this.btnGrid5.Name = "btnGrid5";
             this.btnGrid5.Size = new System.Drawing.Size(75, 75);
             this.btnGrid5.TabIndex = 4;
@@ -115,7 +125,7 @@
             // 
             this.btnGrid6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrid6.Location = new System.Drawing.Point(197, 205);
+            this.btnGrid6.Location = new System.Drawing.Point(217, 205);
             this.btnGrid6.Name = "btnGrid6";
             this.btnGrid6.Size = new System.Drawing.Size(75, 75);
             this.btnGrid6.TabIndex = 5;
@@ -126,7 +136,7 @@
             // 
             this.btnGrid7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrid7.Location = new System.Drawing.Point(35, 286);
+            this.btnGrid7.Location = new System.Drawing.Point(55, 286);
             this.btnGrid7.Name = "btnGrid7";
             this.btnGrid7.Size = new System.Drawing.Size(75, 75);
             this.btnGrid7.TabIndex = 6;
@@ -137,7 +147,7 @@
             // 
             this.btnGrid8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid8.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrid8.Location = new System.Drawing.Point(116, 286);
+            this.btnGrid8.Location = new System.Drawing.Point(136, 286);
             this.btnGrid8.Name = "btnGrid8";
             this.btnGrid8.Size = new System.Drawing.Size(75, 75);
             this.btnGrid8.TabIndex = 7;
@@ -148,7 +158,7 @@
             // 
             this.btnGrid9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGrid9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrid9.Location = new System.Drawing.Point(197, 286);
+            this.btnGrid9.Location = new System.Drawing.Point(217, 286);
             this.btnGrid9.Name = "btnGrid9";
             this.btnGrid9.Size = new System.Drawing.Size(75, 75);
             this.btnGrid9.TabIndex = 8;
@@ -159,66 +169,120 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
+            this.gameToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(316, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(359, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // gameToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
+            this.restartToolStripMenuItem,
+            this.diffToolStripMenuItem,
+            this.toolStripSeparator1,
             this.playerStaticsToolStripMenuItem,
+            this.toolStripSeparator2,
             this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.gameToolStripMenuItem.Text = "&Game";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newGameToolStripMenuItem,
-            this.setPlayerModeToolStripMenuItem,
-            this.setDifficultyToolStripMenuItem});
+            this.gameSPToolStripMenuItem,
+            this.gameMPToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Text = "&New";
             // 
-            // newGameToolStripMenuItem
+            // gameSPToolStripMenuItem
             // 
-            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.newGameToolStripMenuItem.Text = "New Game";
-            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            this.gameSPToolStripMenuItem.Name = "gameSPToolStripMenuItem";
+            this.gameSPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gameSPToolStripMenuItem.Text = "&Single Player";
+            this.gameSPToolStripMenuItem.Click += new System.EventHandler(this.gameSPToolStripMenuItem_Click);
             // 
-            // setPlayerModeToolStripMenuItem
+            // gameMPToolStripMenuItem
             // 
-            this.setPlayerModeToolStripMenuItem.Name = "setPlayerModeToolStripMenuItem";
-            this.setPlayerModeToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.setPlayerModeToolStripMenuItem.Text = "Set Player Mode";
-            this.setPlayerModeToolStripMenuItem.Click += new System.EventHandler(this.setPlayerModeToolStripMenuItem_Click);
+            this.gameMPToolStripMenuItem.Name = "gameMPToolStripMenuItem";
+            this.gameMPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gameMPToolStripMenuItem.Text = "&Multiplayer";
+            this.gameMPToolStripMenuItem.Click += new System.EventHandler(this.gameMPToolStripMenuItem_Click);
             // 
-            // setDifficultyToolStripMenuItem
+            // restartToolStripMenuItem
             // 
-            this.setDifficultyToolStripMenuItem.Name = "setDifficultyToolStripMenuItem";
-            this.setDifficultyToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.setDifficultyToolStripMenuItem.Text = "Set Difficulty";
-            this.setDifficultyToolStripMenuItem.Click += new System.EventHandler(this.setDifficultyToolStripMenuItem_Click);
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.restartToolStripMenuItem.Text = "&Restart";
+            // 
+            // diffToolStripMenuItem
+            // 
+            this.diffToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DiffEasiestToolStripMenuItem,
+            this.DiffEasyToolStripMenuItem,
+            this.DiffMediumToolStripMenuItem,
+            this.DiffHardToolStripMenuItem,
+            this.DiffHardestToolStripMenuItem});
+            this.diffToolStripMenuItem.Name = "diffToolStripMenuItem";
+            this.diffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.diffToolStripMenuItem.Text = "&Difficulty Level";
+            // 
+            // DiffEasiestToolStripMenuItem
+            // 
+            this.DiffEasiestToolStripMenuItem.Name = "DiffEasiestToolStripMenuItem";
+            this.DiffEasiestToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.DiffEasiestToolStripMenuItem.Text = "Ea&siest";
+            // 
+            // DiffEasyToolStripMenuItem
+            // 
+            this.DiffEasyToolStripMenuItem.Name = "DiffEasyToolStripMenuItem";
+            this.DiffEasyToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.DiffEasyToolStripMenuItem.Text = "&Easy";
+            // 
+            // DiffMediumToolStripMenuItem
+            // 
+            this.DiffMediumToolStripMenuItem.Name = "DiffMediumToolStripMenuItem";
+            this.DiffMediumToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.DiffMediumToolStripMenuItem.Text = "&Medium";
+            // 
+            // DiffHardToolStripMenuItem
+            // 
+            this.DiffHardToolStripMenuItem.Name = "DiffHardToolStripMenuItem";
+            this.DiffHardToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.DiffHardToolStripMenuItem.Text = "Har&d";
+            // 
+            // DiffHardestToolStripMenuItem
+            // 
+            this.DiffHardestToolStripMenuItem.Name = "DiffHardestToolStripMenuItem";
+            this.DiffHardestToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.DiffHardestToolStripMenuItem.Text = "&Hardest";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // playerStaticsToolStripMenuItem
             // 
             this.playerStaticsToolStripMenuItem.Name = "playerStaticsToolStripMenuItem";
-            this.playerStaticsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.playerStaticsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playerStaticsToolStripMenuItem.Text = "Player Statics";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
@@ -256,7 +320,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(53, 48);
+            this.label3.Location = new System.Drawing.Point(75, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 43);
             this.label3.TabIndex = 13;
@@ -272,13 +336,33 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // lblP1
+            // 
+            this.lblP1.AutoSize = true;
+            this.lblP1.Location = new System.Drawing.Point(12, 86);
+            this.lblP1.Name = "lblP1";
+            this.lblP1.Size = new System.Drawing.Size(35, 13);
+            this.lblP1.TabIndex = 15;
+            this.lblP1.Text = "label4";
+            // 
+            // lblP2
+            // 
+            this.lblP2.AutoSize = true;
+            this.lblP2.Location = new System.Drawing.Point(274, 86);
+            this.lblP2.Name = "lblP2";
+            this.lblP2.Size = new System.Drawing.Size(35, 13);
+            this.lblP2.TabIndex = 16;
+            this.lblP2.Text = "label5";
+            // 
             // Players
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(316, 404);
+            this.ClientSize = new System.Drawing.Size(359, 425);
+            this.Controls.Add(this.lblP2);
+            this.Controls.Add(this.lblP1);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -316,18 +400,28 @@
         private System.Windows.Forms.Button btnGrid8;
         private System.Windows.Forms.Button btnGrid9;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setPlayerModeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setDifficultyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gameSPToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem playerStaticsToolStripMenuItem;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.ToolStripMenuItem diffToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DiffEasiestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DiffEasyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DiffMediumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DiffHardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DiffHardestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gameMPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.Label lblP1;
+        private System.Windows.Forms.Label lblP2;
     }
 }

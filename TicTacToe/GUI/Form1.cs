@@ -21,20 +21,20 @@ namespace TicTacToe
 
         private void players_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
-            Player_Details_Multi_Players multiDetails = new Player_Details_Multi_Players();
-            multiDetails.ShowDialog();
+            //frmMultiplayer multiDetails = new frmMultiplayer();
+            //multiDetails.ShowDialog();
            
         }
 
 
         private void computer_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
-            Player_Details_Single_Player singleDetails = new Player_Details_Single_Player();
-            singleDetails.ShowDialog();
+            //frmSingleplayer singleDetails = new frmSingleplayer();
+            //singleDetails.ShowDialog();
 
         }
     }

@@ -11,7 +11,19 @@ namespace TicTacToe
         string playerName;
         int playerTile;     //X=+1 O=-1
         MoveLocation mymove;
+        int winnings = 0;
+        int losses = 0;
 
+        public int Winnings
+        {
+            get { return winnings; }
+            set { winnings = value; }
+        }       
+        public int Losses
+        {
+            get { return losses; }
+            set { losses = value; }
+        }
         public int PlayerTile
         {
             get { return playerTile; }
@@ -40,8 +52,15 @@ namespace TicTacToe
            board.placeTile(mymove, playerTile);
        }
 
-       
-       
+       public void win()
+       {
+           winnings++;
+       }
 
+
+       public void loss()
+       {
+           losses++;
+       }
     }
 }

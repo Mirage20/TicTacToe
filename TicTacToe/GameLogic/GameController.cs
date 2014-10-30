@@ -31,6 +31,7 @@ namespace TicTacToe
             this.player1 = player1;
             this.player2 = player2;
             isAI = this.player2 is ComputerPlayer;
+            
         }
 
         public void taketurn(MoveLocation position)
@@ -147,7 +148,7 @@ namespace TicTacToe
             do
             {
                 cpuMove = ((ComputerPlayer)player2).getMove(board);
-            } while (!validate(cpuMove) && turnCount != 9);
+            } while (turnCount != 9 && !validate(cpuMove));
 
             if (turnCount != 9)
             {
@@ -170,7 +171,8 @@ namespace TicTacToe
             
             return true;
         }
-        
+
+        #region WinCheck
         private void checkForWinners()
         {
 
@@ -235,9 +237,21 @@ namespace TicTacToe
             {
 
                 if (isXturn)
-                    WinStatusChanged(false, player1.PlayerTile==1 ? player1:player2,winningLine);
+                {
+                    Player winner = player1.PlayerTile == 1 ? player1 : player2;
+                    winner.win();
+                    Player looser = player1.PlayerTile == 1 ? player2 : player1;
+                    looser.loss();
+                    WinStatusChanged(false, winner, winningLine);
+                }
                 else
+                {
+                    Player winner = player2.PlayerTile == -1 ? player2 : player1;
+                    winner.win();
+                    Player looser = player2.PlayerTile == -1 ? player1 : player2;
+                    looser.loss();
                     WinStatusChanged(false, player2.PlayerTile == -1 ? player2 : player1, winningLine);
+                }
             }
             else
                 checkForDraw();
@@ -251,6 +265,7 @@ namespace TicTacToe
             
         }
 
+        #endregion
         private bool validate(MoveLocation value)
         {
             if (board.getTilevalue(value) == 0)
@@ -264,12 +279,28 @@ namespace TicTacToe
            
         }
 
+        public void changePlayers(Player player1,Player player2)
+        {
+            this.player1 = player1;
+            this.player2 = player2;
+            isAI = this.player2 is ComputerPlayer;
+        }
 
         public void resetGame()
         {
             board.reset();
             turnCount = 0;
             hasWinner = false;
+        }
+
+        public Player getPlayer1()
+        {
+            return player1;
+        }
+
+        public Player getPlayer2()
+        {
+            return player2;
         }
         
     }
