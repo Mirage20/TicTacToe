@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class ComputerPlayer:Player
+    public class ComputerPlayer:Player
     {
         /// <summary>
         /// 0 = Easiest

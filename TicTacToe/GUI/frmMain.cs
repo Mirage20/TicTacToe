@@ -10,28 +10,28 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-    public partial class Players : Form
+    public partial class frmMain : Form
     {
         GameController controller;
         Button[,] buttonGrid = new Button[3,3] ;
-        
-        public Players()
+        bool isOver = false;
+        public frmMain()
         {
             InitializeComponent();
             initGridButtons();
             controller = new GameController(new HumanPlayer("A", 1), new ComputerPlayer(-1,1));
             controller.WinStatusChanged += controller_WinStatusChanged;
             controller.TileChanged += controller_TileChanged;
-            label3.BackColor = Color.Transparent;
+            
             label1.BackColor = Color.Transparent;
             
         }
 
         private void controller_TileChanged(MoveLocation location, string tileValue)
         {
-            buttonGrid[location.X, location.Y].Text = tileValue;
+            buttonGrid[location.X, location.Y].BackgroundImage = tileValue.Equals("X")? Properties.Resources.NEW_x:Properties.Resources.new_o;
             buttonGrid[location.X, location.Y].Enabled = false;
-            buttonGrid[location.X, location.Y].BackColor = Color.Yellow;
+            //buttonGrid[location.X, location.Y].BackColor = Color.Yellow;
         }
 
         private void controller_WinStatusChanged(bool isDraw, Player winner,int winLine)
@@ -39,7 +39,7 @@ namespace TicTacToe
             if(!isDraw)
             {
                 showWinLine(winLine);
-                MessageBox.Show("Player " + winner.PlayerName + " wins ");
+                MessageBox.Show(this, "Congratulations!.\"" + winner.PlayerName + "\" won.","Congratulations",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 updateP1Label(controller.getPlayer1());
                 updateP2Label(controller.getPlayer2());
                 PlayerStatus.getInstance().addStatus(controller.getPlayer1().PlayerName, controller.getPlayer1().Winnings, controller.getPlayer1().Losses);
@@ -47,9 +47,9 @@ namespace TicTacToe
             }
             else
             {
-                MessageBox.Show("Draw!");
+                MessageBox.Show(this, "Game Tied.", "Tied", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+            isOver = true;
             disableButtons();
         }
         
@@ -79,8 +79,9 @@ namespace TicTacToe
                 {
                     if (buttonGrid[i, j].Enabled)
                     {
-                        buttonGrid[i, j].Enabled = false;
-                        buttonGrid[i, j].BackColor = Color.Yellow;
+                        buttonGrid[i, j].Visible = false;
+                        buttonGrid[i, j].BackColor = Color.Transparent;
+                        buttonGrid[i, j].FlatAppearance.BorderSize = 0;
                     }
                 }
             }
@@ -88,13 +89,16 @@ namespace TicTacToe
 
         private void enableButtons()
         {
+            isOver = false;
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
                 {
+                    buttonGrid[i, j].Visible = true;
                     buttonGrid[i, j].Enabled = true;
-                    buttonGrid[i, j].Text = "";
-                    buttonGrid[i, j].BackColor = SystemColors.ControlLightLight;
+                    buttonGrid[i, j].BackgroundImage = null;
+                    buttonGrid[i, j].BackColor = Color.Transparent;
+                    buttonGrid[i, j].FlatAppearance.BorderSize = 0;
                 }
             }
         }
@@ -144,6 +148,11 @@ namespace TicTacToe
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            resetGame();
+        }
+
+        private void resetGame()
+        {
             controller.resetGame();
             enableButtons();
         }
@@ -153,44 +162,44 @@ namespace TicTacToe
             switch (winLine)
             {
                 case 1:
-                    buttonGrid[0, 0].BackColor = Color.Red;
-                    buttonGrid[1, 0].BackColor = Color.Red;
-                    buttonGrid[2, 0].BackColor = Color.Red;
+                    buttonGrid[0, 0].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[1, 0].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[2, 0].BackColor = Color.FromArgb(50,Color.White);
                     break;
                 case 2:
-                    buttonGrid[0, 1].BackColor = Color.Red;
-                    buttonGrid[1, 1].BackColor = Color.Red;
-                    buttonGrid[2, 1].BackColor = Color.Red;
+                    buttonGrid[0, 1].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[1, 1].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[2, 1].BackColor = Color.FromArgb(50,Color.White);
                     break;
                 case 3:
-                    buttonGrid[0, 2].BackColor = Color.Red;
-                    buttonGrid[1, 2].BackColor = Color.Red;
-                    buttonGrid[2, 2].BackColor = Color.Red;
+                    buttonGrid[0, 2].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[1, 2].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[2, 2].BackColor = Color.FromArgb(50,Color.White);
                     break;
                 case 4:
-                    buttonGrid[0, 0].BackColor = Color.Red;
-                    buttonGrid[0, 1].BackColor = Color.Red;
-                    buttonGrid[0, 2].BackColor = Color.Red;
+                    buttonGrid[0, 0].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[0, 1].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[0, 2].BackColor = Color.FromArgb(50,Color.White);
                     break;
                 case 5:
-                    buttonGrid[1, 0].BackColor = Color.Red;
-                    buttonGrid[1, 1].BackColor = Color.Red;
-                    buttonGrid[1, 2].BackColor = Color.Red;
+                    buttonGrid[1, 0].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[1, 1].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[1, 2].BackColor = Color.FromArgb(50,Color.White);
                     break;
                 case 6:
-                    buttonGrid[2, 0].BackColor = Color.Red;
-                    buttonGrid[2, 1].BackColor = Color.Red;
-                    buttonGrid[2, 2].BackColor = Color.Red;
+                    buttonGrid[2, 0].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[2, 1].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[2, 2].BackColor = Color.FromArgb(50,Color.White);
                     break;
                 case 7:
-                    buttonGrid[0, 0].BackColor = Color.Red;
-                    buttonGrid[1, 1].BackColor = Color.Red;
-                    buttonGrid[2, 2].BackColor = Color.Red;
+                    buttonGrid[0, 0].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[1, 1].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[2, 2].BackColor = Color.FromArgb(50,Color.White);
                     break;
                 case 8:
-                    buttonGrid[2, 0].BackColor = Color.Red;
-                    buttonGrid[1, 1].BackColor = Color.Red;
-                    buttonGrid[0, 2].BackColor = Color.Red;
+                    buttonGrid[2, 0].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[1, 1].BackColor = Color.FromArgb(50,Color.White);
+                    buttonGrid[0, 2].BackColor = Color.FromArgb(50,Color.White);
                     break;
                 default:
                     break;
@@ -208,6 +217,10 @@ namespace TicTacToe
                 controller.changePlayers(human, computer);
                 updateP1Label(human);
                 updateP2Label(computer);
+                controller.resetGame();
+                enableButtons();
+                restartToolStripMenuItem.Enabled = true;
+                diffToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -233,38 +246,52 @@ namespace TicTacToe
                 controller.changePlayers(human1, human2);
                 updateP1Label(human1);
                 updateP2Label(human2);
+                controller.resetGame();
+                enableButtons();
+                restartToolStripMenuItem.Enabled = true;
+                diffToolStripMenuItem.Enabled = false;
             }
         }
 
         private void DiffEasiestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             controller.changeComputerDiff(0);
+            if (isOver)
+                resetGame();
         }
 
         private void DiffEasyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controller.changeComputerDiff(1);
+            if (isOver)
+                resetGame();
         }
 
         private void DiffMediumToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controller.changeComputerDiff(2);
+            if (isOver)
+                resetGame();
         }
 
         private void DiffHardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controller.changeComputerDiff(3);
+            if (isOver)
+                resetGame();
         }
 
         private void DiffHardestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controller.changeComputerDiff(4);
+            if (isOver)
+                resetGame();
         }
 
         private void restartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            controller.resetGame();
-            enableButtons();
+            resetGame();
         }
 
         private void Players_FormClosing(object sender, FormClosingEventArgs e)
@@ -276,12 +303,21 @@ namespace TicTacToe
         {
             BinarySerializeProvider.FilePath = Application.StartupPath + "\\scores.sav";
             PlayerStatus.loadInstance();
+            disableButtons();
+            restartToolStripMenuItem.Enabled = false;
+            diffToolStripMenuItem.Enabled = false;
         }
 
         private void playerStaticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPlayerScores frmScore = new frmPlayerScores();
             frmScore.ShowDialog();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 about = new AboutBox1();
+            about.ShowDialog();
         }
        
     }

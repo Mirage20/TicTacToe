@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class MoveLocation
+    public class MoveLocation
     {
         public int X { get; set; }
         public int Y { get; set; }

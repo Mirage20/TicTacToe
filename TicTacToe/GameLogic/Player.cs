@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    abstract class Player
+    public abstract class Player
     {
         string playerName;
         int playerTile;     //X=+1 O=-1

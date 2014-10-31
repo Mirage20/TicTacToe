@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace TicTacToe
 {
-    class GameController
+    public class GameController
     {
         public delegate void WinStatusChangedHandler(bool isDraw,Player winner,int winLine);
         public event WinStatusChangedHandler WinStatusChanged;

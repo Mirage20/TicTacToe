@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TicTacToe")]
-[assembly: AssemblyDescription("Tic-tac-toe by Spelen games is a Noughts and crosses, Xs and Os game that can be used to play for two players or a single player.")]
+[assembly: AssemblyTitle("NUnitTests")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Spelen Games")]
-[assembly: AssemblyProduct("TicTacToe")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("NUnitTests")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e32299c3-1169-45d7-a4e0-8f2bad662423")]
+[assembly: Guid("0fffa73e-4082-43be-9070-73c2c70f2875")]
 
 // Version information for an assembly consists of the following four values:
 //
