@@ -71,3 +71,4 @@ E:\UoM\Sem 3\Programming Challenge 1\Mini Project\TicTacToe\TicTacToe\obj\Debug\
 E:\UoM\Sem 3\Programming Challenge 1\Mini Project\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.Cache
 E:\UoM\Sem 3\Programming Challenge 1\Mini Project\TicTacToe\TicTacToe\obj\Debug\TicTacToe.frmSingleplayer.resources
 E:\UoM\Sem 3\Programming Challenge 1\Mini Project\TicTacToe\TicTacToe\obj\Debug\TicTacToe.frmMultiplayer.resources
+E:\UoM\Sem 3\Programming Challenge 1\Mini Project\TicTacToe\TicTacToe\obj\Debug\TicTacToe.frmPlayerScores.resources

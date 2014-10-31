@@ -61,6 +61,12 @@
     <Compile Include="GUI\frmMultiplayer.Designer.cs">
       <DependentUpon>frmMultiplayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmPlayerScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPlayerScores.Designer.cs">
+      <DependentUpon>frmPlayerScores.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmSingleplayer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="GUI\Players.Designer.cs">
       <DependentUpon>Players.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlayerStatus\BinarySerializeProvider.cs" />
+    <Compile Include="PlayerStatus\PlayerStatus.cs" />
+    <Compile Include="PlayerStatus\Security.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Form1.resx">
@@ -81,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMultiplayer.resx">
       <DependentUpon>frmMultiplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPlayerScores.resx">
+      <DependentUpon>frmPlayerScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSingleplayer.resx">
       <DependentUpon>frmSingleplayer.cs</DependentUpon>

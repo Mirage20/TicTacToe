@@ -42,6 +42,8 @@ namespace TicTacToe
                 MessageBox.Show("Player " + winner.PlayerName + " wins ");
                 updateP1Label(controller.getPlayer1());
                 updateP2Label(controller.getPlayer2());
+                PlayerStatus.getInstance().addStatus(controller.getPlayer1().PlayerName, controller.getPlayer1().Winnings, controller.getPlayer1().Losses);
+                PlayerStatus.getInstance().addStatus(controller.getPlayer2().PlayerName, controller.getPlayer2().Winnings, controller.getPlayer2().Losses);
             }
             else
             {
@@ -232,6 +234,54 @@ namespace TicTacToe
                 updateP1Label(human1);
                 updateP2Label(human2);
             }
+        }
+
+        private void DiffEasiestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.changeComputerDiff(0);
+        }
+
+        private void DiffEasyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.changeComputerDiff(1);
+        }
+
+        private void DiffMediumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.changeComputerDiff(2);
+        }
+
+        private void DiffHardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.changeComputerDiff(3);
+        }
+
+        private void DiffHardestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.changeComputerDiff(4);
+        }
+
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.resetGame();
+            enableButtons();
+        }
+
+        private void Players_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            BinarySerializeProvider.save(PlayerStatus.getInstance());
+        }
+
+        private void Players_Load(object sender, EventArgs e)
+        {
+            BinarySerializeProvider.FilePath = Application.StartupPath + "\\scores.sav";
+            PlayerStatus.loadInstance();
+        }
+
+        private void playerStaticsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPlayerScores frmScore = new frmPlayerScores();
+            frmScore.ShowDialog();
         }
        
     }

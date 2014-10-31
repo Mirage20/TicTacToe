@@ -46,8 +46,7 @@ namespace TicTacToe
                 default:
                     return probabilityMove(board, 100);  
             }
-            
-            
+                      
         }
  
 

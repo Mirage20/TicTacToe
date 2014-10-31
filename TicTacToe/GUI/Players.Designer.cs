@@ -203,14 +203,14 @@
             // gameSPToolStripMenuItem
             // 
             this.gameSPToolStripMenuItem.Name = "gameSPToolStripMenuItem";
-            this.gameSPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gameSPToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.gameSPToolStripMenuItem.Text = "&Single Player";
             this.gameSPToolStripMenuItem.Click += new System.EventHandler(this.gameSPToolStripMenuItem_Click);
             // 
             // gameMPToolStripMenuItem
             // 
             this.gameMPToolStripMenuItem.Name = "gameMPToolStripMenuItem";
-            this.gameMPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gameMPToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.gameMPToolStripMenuItem.Text = "&Multiplayer";
             this.gameMPToolStripMenuItem.Click += new System.EventHandler(this.gameMPToolStripMenuItem_Click);
             // 
@@ -219,6 +219,7 @@
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
             this.restartToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.restartToolStripMenuItem.Text = "&Restart";
+            this.restartToolStripMenuItem.Click += new System.EventHandler(this.restartToolStripMenuItem_Click);
             // 
             // diffToolStripMenuItem
             // 
@@ -237,30 +238,35 @@
             this.DiffEasiestToolStripMenuItem.Name = "DiffEasiestToolStripMenuItem";
             this.DiffEasiestToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.DiffEasiestToolStripMenuItem.Text = "Ea&siest";
+            this.DiffEasiestToolStripMenuItem.Click += new System.EventHandler(this.DiffEasiestToolStripMenuItem_Click);
             // 
             // DiffEasyToolStripMenuItem
             // 
             this.DiffEasyToolStripMenuItem.Name = "DiffEasyToolStripMenuItem";
             this.DiffEasyToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.DiffEasyToolStripMenuItem.Text = "&Easy";
+            this.DiffEasyToolStripMenuItem.Click += new System.EventHandler(this.DiffEasyToolStripMenuItem_Click);
             // 
             // DiffMediumToolStripMenuItem
             // 
             this.DiffMediumToolStripMenuItem.Name = "DiffMediumToolStripMenuItem";
             this.DiffMediumToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.DiffMediumToolStripMenuItem.Text = "&Medium";
+            this.DiffMediumToolStripMenuItem.Click += new System.EventHandler(this.DiffMediumToolStripMenuItem_Click);
             // 
             // DiffHardToolStripMenuItem
             // 
             this.DiffHardToolStripMenuItem.Name = "DiffHardToolStripMenuItem";
             this.DiffHardToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.DiffHardToolStripMenuItem.Text = "Har&d";
+            this.DiffHardToolStripMenuItem.Click += new System.EventHandler(this.DiffHardToolStripMenuItem_Click);
             // 
             // DiffHardestToolStripMenuItem
             // 
             this.DiffHardestToolStripMenuItem.Name = "DiffHardestToolStripMenuItem";
             this.DiffHardestToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.DiffHardestToolStripMenuItem.Text = "&Hardest";
+            this.DiffHardestToolStripMenuItem.Click += new System.EventHandler(this.DiffHardestToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -272,6 +278,7 @@
             this.playerStaticsToolStripMenuItem.Name = "playerStaticsToolStripMenuItem";
             this.playerStaticsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playerStaticsToolStripMenuItem.Text = "Player Statics";
+            this.playerStaticsToolStripMenuItem.Click += new System.EventHandler(this.playerStaticsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -328,7 +335,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(116, 372);
+            this.btnReset.Location = new System.Drawing.Point(136, 377);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 14;
@@ -381,6 +388,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Players";
             this.Text = "Tic Tac Toe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Players_FormClosing);
+            this.Load += new System.EventHandler(this.Players_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

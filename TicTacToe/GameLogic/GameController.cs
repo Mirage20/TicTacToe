@@ -284,6 +284,7 @@ namespace TicTacToe
             this.player1 = player1;
             this.player2 = player2;
             isAI = this.player2 is ComputerPlayer;
+            resetGame();
         }
 
         public void resetGame()
@@ -301,6 +302,14 @@ namespace TicTacToe
         public Player getPlayer2()
         {
             return player2;
+        }
+
+        public void changeComputerDiff(int difficultyLevel)
+        {
+            if(isAI)
+            {
+                ((ComputerPlayer)player2).DifficultyLevel = difficultyLevel;
+            }
         }
         
     }
