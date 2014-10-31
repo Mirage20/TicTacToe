@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class HumanPlayer:Player
+    public class HumanPlayer:Player
     {
         public HumanPlayer(string name, int tileType): base(name, tileType)
         {
